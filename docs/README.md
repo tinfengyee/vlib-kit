@@ -1,1 +1,96 @@
 # Docs
+
+## 1.init
+
+```bash
+pnpm add eslint -D -w
+
+pnpm add eslint-define-config -D -w
+
+# 本身的规则集
+pnpm add eslint-config-standard --filter @vlib/eslint-config
+
+# 内部依赖的规则集
+pnpm add eslint-plugin-promise eslint-plugin-import eslint-plugin-n --filter @vlib/eslint-config
+
+pnpm add @vlib/eslint-config -D -w
+
+pnpm add prettier -D -w
+
+# https://github.com/prettier/eslint-config-prettier/
+# https://github.com/prettier/eslint-plugin-prettier
+pnpm add eslint-config-prettier eslint-plugin-prettier --filter @vlib/eslint-config
+
+
+pnpm add typescript -D -w
+
+# 解析器和内置规则集
+pnpm add @typescript-eslint/parser @typescript-eslint/eslint-plugin --filter @vlib/eslint-config
+
+pnpm add eslint-plugin-vue -F @vlib/eslint-config
+
+安装 vscode 插件 eslint prettier `prettier eslint` 
+
+# 检查 eslint 规则
+# https://marketplace.visualstudio.com/items?itemName=rvest.vs-code-prettier-eslint
+npx eslint --print-config .eslintrc.js
+
+```
+
+配置 vscode
+
+```
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "editor.formatOnPaste": false, // required 
+  "editor.formatOnType": false, // required
+  "editor.formatOnSave": true, // optional 
+  "editor.formatOnSaveMode": "file", // required to format on save
+  "files.autoSave": "onFocusChange", // optional but recommended
+  "vs-code-prettier-eslint.prettierLast": false, // set as "true" to run 'prettier' last not first
+```
+
+stylelint
+
+```bash
+# https://stylelint.io/user-guide/get-started/
+pnpm add stylelint -Dw
+
+pnpm add stylelint postcss -D --filter @vlib/stylelint-config
+
+# https://github.com/stylelint/stylelint-config-standard
+pnpm add stylelint-config-standard --filter @vlib/stylelint-config
+
+# https://github.com/hudochenkov/stylelint-order
+pnpm add stylelint-order stylelint-config-recess-order --filter @vlib/stylelint-config
+
+pnpm add @vlib/stylelint-config -Dw
+
+pnpm add stylelint-prettier --filter @vlib/stylelint-config
+
+pnpm add postcss-html stylelint-config-html --filter @vlib/stylelint-config
+
+pnpm add postcss-less postcss-scss --filter @vlib/stylelint-config
+
+```
+
+lint-staged
+
+```bash
+# https://github.com/okonet/lint-staged
+pnpm add lint-staged -D -w
+
+# https://github.com/conventional-changelog/commitlint
+pnpm add @commitlint/cli @commitlint/config-conventional -D -w
+
+# https://github.com/commitizen/cz-cli
+pnpm add commitizen cz-conventional-changelog -D -w
+
+# https://github.com/typicode/husky
+pnpm add husky -D -w
+
+npx husky install
+
+npx husky add .husky/pre-commit "npm test"
+
+npx husky add .husky//commit-msg "npx --no-install commitlint --edit $1"
+```

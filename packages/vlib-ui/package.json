@@ -1,5 +1,5 @@
 {
-  "name": "@tinf/vlib-ui",
+  "name": "@vlib/ui",
   "version": "1.0.0",
   "description": "extension components",
   "scripts": {
