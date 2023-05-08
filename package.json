@@ -4,9 +4,12 @@
   "description": "",
   "scripts": {
     "prepare": "echo 'Preparing package...' && husky install",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
-    "commit": "npx git-cz"
+    "commit": "npx git-cz",
+    "docs:dev": "pnpm --filter=docs docs:dev",
+    "docs:clean": "pnpm --filter=docs docs:clean",
+    "docs:build": "pnpm --filter=docs docs:build",
+    "docs:serve": "pnpm --filter=docs docs:serve"
   },
   "keywords": [],
   "author": "",

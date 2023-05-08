@@ -4,9 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docs:build": "vuepress build --clean-cache",
+    "docs:clean": "rimraf .vuepress/.temp .vuepress/.cache .vuepress/dist",
+    "docs:dev": "vuepress dev --clean-cache",
+    "docs:serve": "anywhere -s -h localhost -d .vuepress/dist"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@vlib/vuepress-plugins": "workspace:*",
+    "@vuepress/bundler-vite": "2.0.0-beta.49",
+    "@vuepress/client": "2.0.0-beta.49",
+    "anywhere": "^1.6.0",
+    "rimraf": "^5.0.0",
+    "vue": "^3.2.47",
+    "vuepress": "2.0.0-beta.49"
+  }
 }
