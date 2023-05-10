@@ -9,7 +9,8 @@
     "docs:dev": "pnpm --filter=docs docs:dev",
     "docs:clean": "pnpm --filter=docs docs:clean",
     "docs:build": "pnpm --filter=docs docs:build",
-    "docs:serve": "pnpm --filter=docs docs:serve"
+    "docs:serve": "pnpm --filter=docs docs:serve",
+    "gen": "pnpm --filter=@vlib/ui gen"
   },
   "keywords": [],
   "author": "",

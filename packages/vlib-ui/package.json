@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "extension components",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gen": "tsx scripts/generate/component.ts"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +14,12 @@
     "vue": "^3.2.0"
   },
   "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
     "@types/lodash-es": "^4.17.7",
+    "@types/prompts": "^2.4.4",
+    "fs-extra": "^11.1.1",
+    "prompts": "^2.4.2",
+    "tsx": "^3.12.7",
     "vant": "^4.3.1",
     "vue": "^3.2.47"
   },
