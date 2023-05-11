@@ -27,10 +27,9 @@ import { backTopProps } from './props'
 
 const [_, bem] = createNamespace('back-top')
 
-// defineOptions({
-//   name: 'VlibBackTop'
-// })
-
+defineOptions({
+  name: 'vlib-back-top'
+})
 const props = defineProps(backTopProps)
 const emit = defineEmits(['click'])
 

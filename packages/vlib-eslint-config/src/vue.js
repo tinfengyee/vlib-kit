@@ -15,6 +15,7 @@ module.exports = defineConfig({
     }
   ],
   extends: ['plugin:vue/vue3-recommended', './typescript'],
+  globals: { defineOptions: 'writable' },
   rules: {
     // off rules
     'vue/max-attributes-per-line': 'off',
