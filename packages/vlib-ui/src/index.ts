@@ -1,13 +1,12 @@
-import type { App } from 'vue'
+// import type { App } from 'vue'
 import { BackTop } from './back-top'
 import { BackTopTsx } from './back-top-tsx'
-
 export * from './back-top'
 export * from './back-top-tsx'
 
 const components = [BackTop, BackTopTsx]
 
-export function install(app: App) {
+export const install = (app: any) => {
   components.forEach((item) => {
     if (item.install!) {
       app.use(item)

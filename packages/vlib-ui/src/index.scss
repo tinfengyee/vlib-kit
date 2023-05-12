@@ -1,5 +1,2 @@
-.button {
-  width: 11;
-  color: rebeccapurple;
-  columns: 1;
-}
+@use './back-top/style/index.scss' as backTop;
+@use './back-top-tsx/style/index.scss' as backTopTsx;

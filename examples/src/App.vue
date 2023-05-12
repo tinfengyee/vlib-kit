@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
-import { BackTop } from '@vlib/ui'
+// import { BackTop } from '@vlib/ui'
+// import '@vlib/ui/es/back-top/style/index.scss'
 </script>
 
 <template>
@@ -15,8 +16,8 @@ import { BackTop } from '@vlib/ui'
   <van-cell-group>
     <van-cell v-for="i in 15" :key="i">Cell {{ i }}</van-cell>
   </van-cell-group>
-  <!-- <vlib-back-top></vlib-back-top> -->
-  <BackTop />
+  <vlib-back-top></vlib-back-top>
+  <!-- <BackTop /> -->
 
   <HelloWorld msg="Vite + Vue" />
 </template>
